@@ -25,4 +25,14 @@ class DefaultController extends Controller
 			'id' => $id
 		));
     }
+
+    /**
+     * @Route("/pagina/{pagina}", name="simple_pagina")
+     */
+    public function simplePagina($pagina)
+    {   
+        return $this->render('AppBundle:Pagina:pagina.html.twig', array(
+            'pagina' => $pagina
+        ));
+    }
 }
